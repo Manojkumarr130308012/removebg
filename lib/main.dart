@@ -74,6 +74,7 @@ class _RemoveBackgroundState extends State<RemoveBackground> {
                       controller: controller,
                       child: Image.memory(
                         imageFile!,
+                        filterQuality: FilterQuality.high,
                       ),
                     )
                   : Container(
