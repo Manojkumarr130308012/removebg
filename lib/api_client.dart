@@ -6,7 +6,6 @@ class ApiClient {
     var request = http.MultipartRequest(
         "POST", Uri.parse("http://192.168.1.4:3000/remove_background"));
     request.files.add(await http.MultipartFile.fromPath("image", imagePath));
-    // request.headers.addAll({"X-API-key": "aNt3KPVZZgk6UjqpxuNPrKNP"});
     final response = await request.send();
     if (response.statusCode == 200) {
       http.Response imgRes = await http.Response.fromStream(response);
